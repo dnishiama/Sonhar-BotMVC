@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Voluntário</title>
+	
+    
+	<script src="js/jquery.js"></script>
+	
+
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+			$("#buscav").click(function() {
+
+				var cpf = $( "#cpf" ).val();
+					
+				$("#dadosVoluntario").empty();
+					
+				var url = "/vol/"+cpf+"";
+				
+				$.getJSON(url, function(data) {
+						
+				        var itens = []; 	
+						itens.push("<tr><td>"+ data.nome +"</td><td>"+ data.rg + "</td><td>"+ data.cpf + "</td><td>"+ data.email + "</td> <td><a class='btn btn-danger' role='button' href='/delete_screen_vol.html?"+data.id+"'>Deletar</a></td></tr>");
+							
+					
+									
+						$("#dadosVoluntario").append(itens);
+						
+				});
+
+			});
+			
+			$("#buscavol").click(function() {
+
+				var nome = $( "#nomevol" ).val();
+					
+				$("#dadosVoluntario").empty();
+					
+				var url = "/volu/"+nome+"";
+				
+				$.getJSON(url, function(data) {
+						
+				        var itens = []; 	
+				        
+				        $.each(data, function(i){
+							
+							itens.push("<tr><td>"+ this.nome +"</td><td>"+ this.rg + "</td><td>"+ this.cpf + "</td><td>"+ this.email + "</td> <td><a class='btn btn-danger' role='button' href='/delete_screen_vol.html?"+this.id+"'>Deletar</a></td> </tr>");
+							
+						});
+									
+						$("#dadosVoluntario").append(itens);
+						
+				});
+
+			});
+
+
+		});
+
+	</script>
+
+  </head>
+
+
+  <body background="http://sonharacordado.org.br/wp-content/uploads/2016/10/5-1.jpg">
+	<br>	
+	<div class="container">
+	<div class="jumbotron">
+	  <h1 class="display-3 ">ONG SONHAR ACORDADO</h1>
+	  <p class="lead">Sistema de gerenciamento.</p>
+	  <hr class="my-4">
+	  <p>Excluir Voluntário</p>
+	  <p class="lead">
+	  <table class="table">
+	  <form class="form-horizontal">  	
+		<div id="buscaVoluntario">
+      <div>   
+		<label>CPF voluntário</label><br>
+		<input type= "text" id="cpf">
+		</div>
+		</form>
+		<button id="buscav" type="submit" class="btn btn-danger col-md-offset-5">Buscar</button>
+		
+		<form class="form-horizontal">	
+		<div id="buscaVoluntario">
+      <div>   
+		<label>Nome voluntário</label><br>
+		<input type= "text" id="nomevol">
+		</div>
+		</div>
+		</div>
+		</form>
+		<button id="buscavol" type="submit" class="btn btn-danger col-md-offset-5">Buscar</button>
+		
+		<table class="table table-bordered"> 
+			<caption>Voluntários</caption>
+				<thead>
+					<tr> 
+						<th>Nome</th>
+						<th>RG</th> 
+						<th>CPF</th> 
+						<th>Email</th> 
+					</tr> 
+				</thead> 
+				
+				<tbody id="dadosVoluntario"> 
+					
+				</tbody> 
+		</table>
+			
+		<form method="get" action=" index.html"><button class="btn btn-danger col-md-offset-5"type="submit">Voltar</button></form>
+		
+  </body>
+  
+</html>

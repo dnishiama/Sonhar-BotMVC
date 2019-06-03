@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Criança</title>
+	
+    
+	<script src="js/jquery.js"></script>
+	
+
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+			$("#cadastrac").click(function() {
+				
+				
+				var id = $('#id').val();
+				var nome = $('#nome').val();
+				var idade = $('#idade').val();
+				var local = $('#local').val();
+				var endereco = $('#endereco').val();
+				
+				var url = JSON.stringify({"id":id,"nome":nome,"idade":idade,"local":local,"endereco":endereco});
+				
+				$.post("/crianca/", url, function(data){
+					
+					if(data[0].status == 1){
+						window.location.href = '/statuscadastro_cri.html?success';
+					} else {
+						window.location.href = '/statuscadastro_cri.html?error';
+					}
+					
+					
+				}, "json");
+			});
+			
+		});
+			
+
+	</script>
+
+   
+  </head>
+
+
+  <body background="http://sonharacordado.org.br/wp-content/uploads/2016/10/5-1.jpg">
+	<br>	
+	<div class="container">
+	<div class="jumbotron">
+	  <h1 class="display-3 ">ONG SONHAR ACORDADO</h1>
+	  <p class="lead">Sistema de gerenciamento.</p>
+	  <hr class="my-4">
+	  <p>Cadastro de Crianças</p>
+	  <p class="lead">
+	  <table class="table">
+	    
+  		<div id="buscaCrianca">
+        <div>   
+		<br><br>
+		<div class="form-horizontal" method="post" id="form">
+		<label>Id: </label><br>
+		<input type= "text" id="id">
+		<br><br>
+		<label>Nome: </label><br>
+		<input type= "text" id="nome">
+		<br><br>
+		<label>Idade: </label><br>
+		<input type= "text" id="idade">
+		<br><br>
+		<label>Local: </label><br>
+		<input type= "text" id="local">
+		<br><br>
+		<label>Endereço: </label><br>
+		<input type= "text" id="endereco">
+		
+		<button id="cadastrac" class="btn btn-danger col-md-offset-5" type="submit">Cadastrar</button>
+		</div>
+		</div>
+		
+		</div>
+		
+		
+		
+		<br><br>
+		
+		<form method="get" action=" index.html"><button class="btn btn-danger col-md-offset-5"type="submit">Voltar</button></form>
+		
+  </body>
+  
+</html>

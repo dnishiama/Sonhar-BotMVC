@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Criança</title>
+	
+    
+	<script src="js/jquery.js"></script>
+	
+
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+
+			$("#buscac").click(function() {
+
+				var nome = $( "#nome" ).val();
+					
+				$("#dadosCrianca").empty();
+					
+				var url = "/cri/"+nome+"";
+				
+				$.getJSON(url, function(data) {
+						
+				        var itens = []; 	
+				        
+				        $.each(data, function(i){
+							
+							itens.push("<tr><td>"+ this.nome +"</td><td>"+ this.idade + "</td> <td><a class='btn btn-danger' role='button' href='/delete_screen_cri.html?"+this.id+"'>Deletar</a></td> </tr>");
+							
+						});
+									
+						$("#dadosCrianca").append(itens);
+						
+				});
+
+			});
+
+		});
+
+	</script>
+	
+   
+  </head>
+
+
+  <body background="http://sonharacordado.org.br/wp-content/uploads/2016/10/5-1.jpg">
+	<br>	
+	<div class="container">
+	<div class="jumbotron">
+	  <h1 class="display-3 ">ONG SONHAR ACORDADO</h1>
+	  <p class="lead">Sistema de gerenciamento.</p>
+	  <hr class="my-4">
+	  <p>Excluir Crianças</p>
+	  <p class="lead">
+	  <table class="table">
+	  <form class="form-horizontal"> 
+  		<div id="buscaCrianca">
+        <div>   
+		<br><br>
+		<label>Nome: </label><br>
+		<input type= "text" id="nome">
+		</div>
+		
+		</div>
+		</form>
+		<button id="buscac" type="submit" class="btn btn-danger col-md-offset-5">Buscar</button>
+		
+		<table class="table table-bordered"> 
+			<caption>Criancas</caption>
+				<thead>
+					<tr> 
+						<th>Nome</th>
+						<th>Idade</th> 
+					</tr> 
+				</thead> 
+				
+				<tbody id="dadosCrianca"> 
+					
+				</tbody> 
+		</table>
+		
+		<form method="get" action=" index.html"><button class="btn btn-danger col-md-offset-5"type="submit">Voltar</button></form>
+		
+  </body>
+  
+</html>

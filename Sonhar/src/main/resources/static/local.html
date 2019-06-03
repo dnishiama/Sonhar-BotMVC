@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Local</title>
+	
+    
+	<script src="js/jquery.js"></script>
+	
+
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+			$("#buscaloc").click(function() {
+
+				var nome = $( "#nomeloc" ).val();
+					
+				$("#dadosLocal").empty();
+					
+				var url = "/loc/"+nome+"";
+				
+				$.getJSON(url, function(data) {
+						
+				        var itens = []; 	
+				        
+				        $.each(data, function(i){
+							
+							itens.push("<tr> <td>"+ this.nome +"</td><td>"+ this.instituicao +"</td><td>"+this.endereco +"</td><td>"+this.telefone+"</td></tr>");
+							
+						});
+									
+						$("#dadosLocal").append(itens);
+						
+				});
+
+			});
+			
+		});
+
+	</script>
+
+  </head>
+
+
+  <body background="http://sonharacordado.org.br/wp-content/uploads/2016/10/5-1.jpg">
+	<br>	
+	<div class="container">
+	<div class="jumbotron">
+	  <h1 class="display-3 ">ONG SONHAR ACORDADO</h1>
+	  <p class="lead">Sistema de gerenciamento.</p>
+	  <hr class="my-4">
+	  <p>Busca de local</p>
+	  <p class="lead">
+	  <table class="table">	   
+		
+		<div id="buscaLocal">
+        <div>   
+		<label>Nome:</label><br>
+		<input type= "text" id="nomeloc">
+		</div>
+		</div>
+
+		<button id="buscaloc" class="btn btn-danger col-md-offset-5">Buscar</button>
+		
+		
+		<table class="table table-bordered"> 
+			<caption>Locais</caption>
+				<thead>
+					<tr> 
+						<th>Nome</th>
+						<th>instituição</th>
+						<th>Endereço</th> 
+						<th>Telefone</th>
+					</tr> 
+				</thead> 
+				
+				<tbody id="dadosLocal"> 
+					
+				</tbody> 
+		</table>
+
+		<form method="get" action=" index.html"><button class="btn btn-danger col-md-offset-5"type="submit">Voltar</button></form>
+  </body>
+  
+</html>
