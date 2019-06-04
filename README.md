@@ -12,7 +12,7 @@ Diagrama de Classes:</br>
 </br>
 </br>
 Screenshots de Execução</br>
-![Celular1](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular1.png)</br>
+![Celular1](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular1.png =250x)</br>
 ![Screenshot1](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse1.JPG)</br>
 ![Celular2](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular2.png)</br>
 ![Screenshot2](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse2.JPG)</br>
