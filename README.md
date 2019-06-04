@@ -1,8 +1,8 @@
 # Sonhar-BotMVC
 
-Aluno: Douglas Hiromi Nishiama
-Aluno: Renato Borges Gallo Junior
-Aluno: Valdir Evaristo da Silva Junior
-
-Disciplina: Padrões de Projeto
+Aluno: Douglas Hiromi Nishiama <br/>
+Aluno: Renato Borges Gallo Junior <br/>
+Aluno: Valdir Evaristo da Silva Junior <br/>
+<br/><br/>
+Disciplina: Padrões de Projeto<br/>
 Professor: Giuliano Araujo Bertoti
