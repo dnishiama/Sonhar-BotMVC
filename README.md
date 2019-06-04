@@ -12,7 +12,23 @@ Diagrama de Classes:</br>
 </br>
 </br>
 Screenshots de Execução</br>
-![Celular1](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular1.png =250x)</br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular1.png" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse1.JPG" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular2.png" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse2.JPG" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular3.png" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse3.JPG" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular4.png" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse4.JPG" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular5.png" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse5.JPG" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular6.png" alt="drawing" width="200"/></br>
+<img src="https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse6.JPG" alt="drawing" width="200"/></br>
+
+
+
+</br>
+![Celular1](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular1.png)</br>
 ![Screenshot1](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse1.JPG)</br>
 ![Celular2](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Celular2.png)</br>
 ![Screenshot2](https://github.com/dnishiama/Sonhar-BotMVC/blob/master/Imagens/Screenshots/Eclipse2.JPG)</br>
